@@ -17,6 +17,7 @@ const __dirname = dirname(__filename);
 // Import API
 import testApis from "./apis/testApis.js";
 import authApis from "./apis/authApis.js";
+import uploadApis from "./apis/uploadApis.js";
 
 // App and Middleware
 const app = express();
@@ -72,6 +73,10 @@ app.use(limiter);
 // API Routes
 app.use("/api/v1/test", testApis);
 app.use("/api/v1/auth", authApis);
+app.use("/api/v1/upload", uploadApis);
+
+// FILE UPLOAD
+app.use("/public", express.static(path.join(__dirname, "public")));
 
 // ERROR HANDLING MIDDLEWARE
 app.use(globalErrorHandler);
