@@ -14,8 +14,6 @@ const configProd = {
   DB_NAME: process.env.PROD_DB_NAME,
   DB_URL: process.env.PROD_DB_URL,
   DB_PASSWORD: process.env.PROD_DB_PASSWORD,
-  EMAIL: process.env.PROD_EMAIL,
-  PASSWORD: process.env.PROD_PASSWORD,
   JWT_ACTIVATE: process.env.PROD_JWT_ACTIVATE,
 };
 
